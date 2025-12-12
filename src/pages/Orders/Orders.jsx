@@ -8,7 +8,7 @@ const Orders = () => {
 
   const fetchAllOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:4000/api/order/list");
+      const { data } = await axios.get("https://food-delivery-website-backend-vr5w.onrender.com/api/order/list");
       if (data.success) {
         setOrders(data.data);
       }
@@ -23,7 +23,7 @@ const Orders = () => {
     try {
       // Using POST to match your backend
       const { data } = await axios.post(
-        "http://localhost:4000/api/order/update",
+        "https://food-delivery-website-backend-vr5w.onrender.com/api/order/update",
         { orderId, status: newStatus }
       );
 
